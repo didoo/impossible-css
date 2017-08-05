@@ -29,7 +29,8 @@
         "#breadcrumbs",
         "#badges",
         "#buttons",
-        "#jumbotrons"
+        "#jumbotrons",
+        "#progress"
       ],
       "readyEvent": null,
       "delay": 500,
