@@ -7,6 +7,10 @@
   @include media-breakpoint-up(sm) {
     padding: ($jumbotron-padding * 2) $jumbotron-padding;
   }
+
+  // fix for "impossible-css" (on mobile viewport breaks the layout)
+  overflow-wrap: break-word;
+  word-wrap: break-word;
 }
 
 .jumbotron-fluid {

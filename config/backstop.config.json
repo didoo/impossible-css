@@ -28,7 +28,8 @@
         "#alerts",
         "#breadcrumbs",
         "#badges",
-        "#buttons"
+        "#buttons",
+        "#jumbotrons"
       ],
       "readyEvent": null,
       "delay": 500,
