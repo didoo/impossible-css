@@ -1,0 +1,48 @@
+{
+  "id": "impossible",
+  "viewports": [
+    {
+      "name": "phone",
+      "width": 320,
+      "height": 480
+    },
+    {
+      "name": "tablet_v",
+      "width": 568,
+      "height": 1024
+    },
+    {
+      "name": "tablet_h",
+      "width": 1024,
+      "height": 768
+    }
+  ],
+  "scenarios": [
+    {
+      "label": "Impossible CSS - Main Page",
+      "url": "http://localhost:8000/index.html",
+      "hideSelectors": [],
+      "removeSelectors": [],
+      "selectorExpansion": true,
+      "selectors": [
+        "main",
+        ".bd-example"
+      ],
+      "readyEvent": null,
+      "delay": 500,
+      "misMatchThreshold" : 0.1,
+      "requireSameDimensions" : true
+    }
+  ],
+  "paths": {
+    "bitmaps_reference": "backstop/bitmaps_reference",
+    "bitmaps_test": "backstop/bitmaps_test",
+    "casper_scripts": "backstop/casper_scripts",
+    "html_report": "backstop/html_report",
+    "ci_report": "backstop/ci_report"
+  },
+  "casperFlags": [],
+  "engine": "phantomjs",
+  "report": ["browser"],
+  "debug": false
+}

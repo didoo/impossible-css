@@ -36,3 +36,4 @@ scss-lint-report.xml
 bower_components
 node_modules
 dist
+backstop
