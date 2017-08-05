@@ -26,6 +26,7 @@
       "selectorExpansion": true,
       "selectors": [
         "#alerts",
+        "#badges",
         "#buttons"
       ],
       "readyEvent": null,
