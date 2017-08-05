@@ -112,10 +112,13 @@
 //
 
 .bd-title {
-  margin-top: 3rem;
   padding-bottom: .5rem;
   font-weight: 500;
   border-bottom: 1px solid #E4E4E4;
+
+  section:not(:first-child) & {
+    margin-top: 3rem;
+  }
 }
 
 .bd-content {
