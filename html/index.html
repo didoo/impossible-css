@@ -277,26 +277,28 @@
                     <h1 class="bd-title" id="content">Breadcrumb</h1>
 
                     <div class="bd-example" data-example-id="">
-                        <ol class="breadcrumb">
-                            <li class="breadcrumb-item active">Home</li>
-                        </ol>
-                        <ol class="breadcrumb">
-                            <li class="breadcrumb-item"><a href="#">Home</a></li>
-                            <li class="breadcrumb-item active">Library</li>
-                        </ol>
-                        <ol class="breadcrumb">
-                            <li class="breadcrumb-item"><a href="#">Home</a></li>
-                            <li class="breadcrumb-item"><a href="#">Library</a></li>
-                            <li class="breadcrumb-item active">Data</li>
-                        </ol>
+                        <breadcrumb>
+                            <breadcrumb-item status="active">Home</breadcrumb-item>
+                        </breadcrumb>
+                        <breadcrumb>
+                            <breadcrumb-item><a href="#">Home</a></breadcrumb-item>
+                            <breadcrumb-item status="active">Library</breadcrumb-item>
+                        </breadcrumb>
+                        <breadcrumb>
+                            <breadcrumb-item><a href="#">Home</a></breadcrumb-item>
+                            <breadcrumb-item><a href="#">Library</a></breadcrumb-item>
+                            <breadcrumb-item status="active">Data</breadcrumb-item>
+                        </breadcrumb>
                     </div>
 
                     <div class="bd-example" data-example-id="">
-                        <nav class="breadcrumb">
-                            <a class="breadcrumb-item" href="#">Home</a>
-                            <a class="breadcrumb-item" href="#">Library</a>
-                            <a class="breadcrumb-item" href="#">Data</a>
-                            <span class="breadcrumb-item active">Bootstrap</span>
+                        <nav>
+                            <breadcrumb>
+                                <breadcrumb-item><a href="#">Home</a></breadcrumb-item>
+                                <breadcrumb-item><a href="#">Library</a></breadcrumb-item>
+                                <breadcrumb-item><a href="#">Data</a></breadcrumb-item>
+                                <breadcrumb-item status="active">Bootstrap</breadcrumb-item>
+                            </breadcrumb>
                         </nav>
                     </div>
 

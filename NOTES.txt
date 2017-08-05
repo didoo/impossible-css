@@ -1,5 +1,18 @@
 1 - replace main class with tag
 2 - replace variants/modifiers with HTML attributes
-  - problems:
-    - "type"? is used in form controls
-    - "color"? not very semantic
+
+BADGES
+problems:
+- "type"? is used in form controls
+- "color"? not very semantic
+
+BREADCRUMBS
+how to replace the nav? the structure is simple before, more complex/convoluted later
+<nav class="breadcrumb">
+    <a class="breadcrumb-item" href="#">Home</a>
+    <a class="breadcrumb-item" href="#">Library</a>
+    <a class="breadcrumb-item" href="#">Data</a>
+    <span class="breadcrumb-item" status="active">Bootstrap</span>
+</nav>
+
+3) don';'t like and hard to read tags like <breadcrumb-item> (+ no highlighting in IDE/text-editor) so decided to move to CamelCase tags

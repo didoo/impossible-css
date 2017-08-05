@@ -1,4 +1,5 @@
-.breadcrumb {
+breadcrumb {
+  display: block;
   padding: $breadcrumb-padding-y $breadcrumb-padding-x;
   margin-bottom: 1rem;
   list-style: none;
@@ -7,11 +8,12 @@
   @include clearfix;
 }
 
-.breadcrumb-item {
+breadcrumb-item {
+  display: block;
   float: left;
 
   // The separator between breadcrumbs (by default, a forward-slash: "/")
-  + .breadcrumb-item::before {
+  + breadcrumb-item::before {
     display: inline-block; // Suppress underlining of the separator in modern browsers
     padding-right: $breadcrumb-item-padding;
     padding-left: $breadcrumb-item-padding;
@@ -25,14 +27,14 @@
   //
   // To trick IE into suppressing the underline, we give the pseudo-element an
   // underline and then immediately remove it.
-  + .breadcrumb-item:hover::before {
+  + breadcrumb-item:hover::before {
     text-decoration: underline;
   }
-  + .breadcrumb-item:hover::before {
+  + breadcrumb-item:hover::before {
     text-decoration: none;
   }
 
-  &.active {
+  &[status="active"] {
     color: $breadcrumb-active-color;
   }
 }
