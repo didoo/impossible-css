@@ -1,4 +1,5 @@
-.jumbotron {
+Jumbotron {
+  display: block;
   padding: $jumbotron-padding ($jumbotron-padding / 2);
   margin-bottom: $jumbotron-padding;
   background-color: $jumbotron-bg;
@@ -13,7 +14,7 @@
   word-wrap: break-word;
 }
 
-.jumbotron-fluid {
+Jumbotron[layout="fluid"] {
   padding-right: 0;
   padding-left: 0;
   @include border-radius(0);
