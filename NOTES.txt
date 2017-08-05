@@ -1,0 +1,5 @@
+1 - replace main class with tag
+2 - replace variants/modifiers with HTML attributes
+  - problems:
+    - "type"? is used in form controls
+    - "color"? not very semantic

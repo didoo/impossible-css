@@ -2,7 +2,7 @@
   @include color-yiq($bg);
   background-color: $bg;
 
-  &[href] {
+  &[href] { // CR - TODO: check how to convert this rule, probably rely on the parent <a> tag
     @include hover-focus {
       @include color-yiq($bg);
       text-decoration: none;
