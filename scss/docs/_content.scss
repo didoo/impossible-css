@@ -88,9 +88,7 @@
 .bd-title {
   margin-top: 1rem;
   margin-bottom: .5rem;
-  padding-bottom: .5rem;
   font-weight: 300;
-  border-bottom: 1px solid #E4E4E4;
 
   @include media-breakpoint-up(sm) {
     font-size: 3rem;
@@ -105,5 +103,23 @@
     max-width: 80%;
     margin-bottom: 1rem;
     font-size: 1.5rem;
+  }
+}
+
+
+//
+// Overrides for "impossible-css"
+//
+
+.bd-title {
+  padding-bottom: .5rem;
+  font-weight: 500;
+  border-bottom: 1px solid #E4E4E4;
+}
+
+.bd-content {
+  > h2,
+  > h3 {
+    font-size: 1.2rem; // override for impossible-css
   }
 }
