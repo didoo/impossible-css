@@ -112,14 +112,31 @@
 //
 
 .bd-title {
+  margin-top: 3rem;
   padding-bottom: .5rem;
   font-weight: 500;
   border-bottom: 1px solid #E4E4E4;
 }
 
 .bd-content {
-  > h2,
-  > h3 {
-    font-size: 1.2rem; // override for impossible-css
+  section {
+    > h2,
+    > h3 {
+      margin-top: 1.5rem;
+      font-size: 1.2rem;
+    }
+  }
+}
+
+.bd-content {
+  section {
+    > .bd-lead,
+    > .highlight,
+    > .bd-callout,
+    // > h3,
+    > p,
+    > ul {
+      display: none;
+    }
   }
 }
