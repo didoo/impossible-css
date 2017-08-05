@@ -26,6 +26,7 @@
       "selectorExpansion": true,
       "selectors": [
         "#alerts",
+        "#breadcrumbs",
         "#badges",
         "#buttons"
       ],
