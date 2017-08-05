@@ -13,18 +13,19 @@
   "author": "Cristiano Rastelli",
   "scripts": {
     "css": "npm-run-all css-compile css-prefix css-minify",
-    "css-compile": "node-sass --output-style expanded --no-map --precision 6 scss/bootstrap.scss dist/css/bootstrap.css && node-sass --output-style expanded --no-map --precision 6 scss/bootstrap-grid.scss dist/css/bootstrap-grid.css && node-sass --output-style expanded --no-map --precision 6 scss/bootstrap-reboot.scss dist/css/bootstrap-reboot.css",
+    "css-compile": "node-sass --output-style expanded --no-map --precision 6 scss/bootstrap.scss dist/css/bootstrap.css && node-sass --output-style expanded --no-map --precision 6 scss/bootstrap-grid.scss dist/css/bootstrap-grid.css && node-sass --output-style expanded --no-map --precision 6 scss/bootstrap-reboot.scss dist/css/bootstrap-reboot.css && node-sass --output-style expanded --no-map --precision 6 scss/docs.scss dist/css/docs.css",
     "css-prefix": "postcss --config config/postcss.config.js --replace dist/css/*.css",
-    "css-minify": "cleancss --level 1 --output dist/css/bootstrap.min.css dist/css/bootstrap.css && cleancss --level 1 --output dist/css/bootstrap-grid.min.css dist/css/bootstrap-grid.css && cleancss --level 1 --output dist/css/bootstrap-reboot.min.css dist/css/bootstrap-reboot.css",
-    "build": "npm-run-all --parallel css",
-    "watch": "nodemon --ignore js/ --ignore dist/ -e scss -x \"npm run css && npm run css-docs\""
+    "css-minify": "cleancss --level 1 --output dist/css/bootstrap.min.css dist/css/bootstrap.css && cleancss --level 1 --output dist/css/bootstrap-grid.min.css dist/css/bootstrap-grid.css && cleancss --level 1 --output dist/css/bootstrap-reboot.min.css dist/css/bootstrap-reboot.css && cleancss --level 1 --output dist/css/docs.min.css dist/css/docs.css",
+    "html": "npm-run-all html-copy",
+    "html-copy": "copyfiles -u 1 html/*.html dist",
+    "build": "npm-run-all --parallel html css",
+    "watch": "nodemon --ignore dist/ --ignore node_modules --ignore config -e scss,html -x \"npm run css && npm run html\"",
+    "serve": "lite-server -c config/lite-server.config.json"
   },
-  "style": "dist/css/bootstrap.css",
-  "sass": "scss/bootstrap.scss",
-  "license": "MIT",
   "devDependencies": {
     "autoprefixer": "^7.1.2",
     "clean-css-cli": "^4.1.6",
+    "lite-server": "^2.3.0",
     "node-sass": "^4.5.3",
     "nodemon": "^1.11.0",
     "npm-run-all": "^4.0.2",
