@@ -15,4 +15,23 @@ how to replace the nav? the structure is simple before, more complex/convoluted 
     <span class="breadcrumb-item" status="active">Bootstrap</span>
 </nav>
 
-3) don';'t like and hard to read tags like <breadcrumb-item> (+ no highlighting in IDE/text-editor) so decided to move to CamelCase tags
+3) don't like and hard to read tags like <breadcrumb-item> (+ no highlighting in IDE/text-editor) so decided to move to CamelCase tags
+
+PROGRESS
+problems
+- <progress> is a reserved word (real tag) so we had to find a different tag name - looked at how Foundation.css does: ProgressBar > ProgressBarMeter
+- how do you replace the [hover] here?
+    @mixin bg-variant($parent, $color) {
+      #{$parent} {
+        background-color: $color !important;
+      }
+      a#{$parent} {
+        @include hover-focus {
+          background-color: darken($color, 10%) !important;
+        }
+      }
+    }
+- continuously seeing visual regression but no idea why
+also
+- <div class="progress-bar w-75" doesn't makes sense, is a dynamic component! using a workaround to replace it, but should not be a real case to consider
+
