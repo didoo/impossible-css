@@ -304,23 +304,27 @@
 }
 
 // Tooltips
-.bd-example-tooltips {
+.bd-example[component="tooltips"] {
   text-align: center;
-}
-.bd-example-tooltips > .btn {
-  margin-top: .25rem;
-  margin-bottom: .25rem;
-}
-.bs-tooltip-top-docs,
-.bs-tooltip-bottom-docs {
-  .arrow {
-    left: 50%;
+
+  Tooltip {
+    position: relative;
+    display: inline-block;
+    margin: 10px 20px;
+    // opacity: 1;
   }
-}
-.bs-tooltip-right-docs,
-.bs-tooltip-left-docs {
-  .arrow {
-    top: 50%;
+
+  Tooltip[position="top"],
+  Tooltip[position="bottom"] {
+    Arrow {
+      left: 50%;
+    }
+  }
+  Tooltip[position="right"],
+  Tooltip[position="left"] {
+    Arrow {
+      top: 50%;
+    }
   }
 }
 
@@ -352,13 +356,6 @@
 // Tooltips
 .tooltip-demo a {
   white-space: nowrap;
-}
-
-.bd-example-tooltip-static .tooltip {
-  position: relative;
-  display: inline-block;
-  margin: 10px 20px;
-  opacity: 1;
 }
 
 // Scrollspy demo on fixed height div

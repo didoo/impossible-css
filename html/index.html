@@ -103,7 +103,7 @@
                 </nav>
             </div>
 
-            <main class="col-12 col-md-9 col-xl-8 py-md-3 pl-md-5 bd-content">
+            <main class="col-12 col-md-9 col-xl-10 py-md-3 pl-md-5 bd-content">
 
                 <!--
                 //////////////////////
@@ -687,23 +687,23 @@
 
                     <h3 id="static-demo">Static demo</h3>
 
-                    <div class="bd-example bd-example-tooltip-static">
-                        <div class="tooltip bs-tooltip-top bs-tooltip-top-docs" role="tooltip">
-                            <div class="arrow"></div>
-                                <div class="tooltip-inner">Tooltip on the top</div>
-                            </div>
-                            <div class="tooltip bs-tooltip-right bs-tooltip-right-docs" role="tooltip">
-                                <div class="arrow"></div>
-                                <div class="tooltip-inner">Tooltip on the right</div>
-                            </div>
-                            <div class="tooltip bs-tooltip-bottom bs-tooltip-bottom-docs" role="tooltip">
-                                <div class="arrow"></div>
-                                <div class="tooltip-inner">Tooltip on the bottom</div>
-                            </div>
-                            <div class="tooltip bs-tooltip-left bs-tooltip-left-docs" role="tooltip">
-                                <div class="arrow"></div>
-                                <div class="tooltip-inner">Tooltip on the left</div>
-                        </div>
+                    <div class="bd-example bd-example-tooltip-static" component="tooltips">
+                        <Tooltip position="top" show role="tooltip">
+                            <Arrow></Arrow>
+                            <TooltipInner>Tooltip on the top</TooltipInner>
+                        </Tooltip>
+                        <Tooltip position="right" show role="tooltip">
+                            <Arrow></Arrow>
+                            <TooltipInner>Tooltip on the right</TooltipInner>
+                        </Tooltip>
+                        <Tooltip position="bottom" show role="tooltip">
+                            <Arrow></Arrow>
+                            <TooltipInner>Tooltip on the bottom</TooltipInner>
+                        </Tooltip>
+                        <Tooltip position="left" show role="tooltip">
+                            <Arrow></Arrow>
+                            <TooltipInner>Tooltip on the left</TooltipInner>
+                        </Tooltip>
                     </div>
 
                 </section>
