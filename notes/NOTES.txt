@@ -7,7 +7,7 @@ problems:
 - "color"? not very semantic
 
 BREADCRUMBS
-how to replace the nav? the structure is simple before, more complex/convoluted later
+how to replace the nav? the structure is simple before, more complex/convoluted later(but looking at <pagination>, more consistent with it)
 <nav class="breadcrumb">
     <a class="breadcrumb-item" href="#">Home</a>
     <a class="breadcrumb-item" href="#">Library</a>
@@ -35,3 +35,23 @@ problems
 also
 - <div class="progress-bar w-75" doesn't makes sense, is a dynamic component! using a workaround to replace it, but should not be a real case to consider
 
+4) while I was moving the examples from the documentation code to my experiment, I saw a lot of inconsistencies (e.g. <h2>/<h3> for the section titles). maybe using "component" based code makes it easier to spot and/or leads to a better consistency?
+
+5) backstopjs/phantomjs don't work well with the VRT testing
+
+PAGINATION
+problems
+-  had to convert .page-link to a normal <a> tag, but this implied code like this :(
+&:last-child > a { ... }
+&[active] > a { ... }
+which is not very solid or resilient to changes
+- there is a rule for anchors:
+a:not([href]):not([tabindex]) {
+    color: inherit;
+    text-decoration: none;
+}
+that has higher specificity of the resulting rule:
+PaginationItem[active] > a {
+    color: #fff;
+}
+so in theory I should force the color somehow (using important or increasing specificity). for the experiment I'll leave it as is
