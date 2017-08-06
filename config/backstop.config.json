@@ -21,7 +21,8 @@
         "#buttons",
         "#jumbotrons",
         "#pagination",
-        "#progress"
+        "#progress",
+        "#tooltips"
       ],
       "readyEvent": null,
       "delay": 500,
