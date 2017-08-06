@@ -157,8 +157,8 @@
   > .nav + .nav,
   > .alert + .alert,
   > .navbar + .navbar,
-  > .progress + .progress,
-  > .progress + .btn {
+  > ProgressBar + ProgressBar,
+  > ProgressBar + .btn {
     margin-top: 1rem;
   }
 

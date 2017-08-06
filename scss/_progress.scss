@@ -3,7 +3,7 @@
   to { background-position: 0 0; }
 }
 
-.progress {
+ProgressBar {
   display: flex;
   overflow: hidden; // force rounded corners by cropping it
   font-size: $progress-font-size;
@@ -14,19 +14,36 @@
   @include box-shadow($progress-box-shadow);
 }
 
-.progress-bar {
+ProgressBarMeter {
+  display: block;
   height: $progress-height;
   line-height: $progress-height;
   color: $progress-bar-color;
   background-color: $progress-bar-bg;
   @include transition($progress-bar-transition);
+
+  // to replace the .bg-{color} helper classes
+  // @each $color, $value in $theme-colors {
+  //   @include bg-variant('.bg-#{$color}', $value);
+  // }
+
+  // to emulate .w-75 in this context
+  &[value="75"] {
+    width: 75%;
+  }
 }
 
-.progress-bar-striped {
+@each $color, $value in $theme-colors {
+  ProgressBarMeter[color="#{$color}"] {
+    background-color: $value !important;
+  }
+}
+
+ProgressBarMeter[striped] {
   @include gradient-striped();
   background-size: $progress-height $progress-height;
 }
 
-.progress-bar-animated {
+ProgressBarMeter[animated] {
   animation: progress-bar-stripes $progress-bar-animation-timing;
 }
