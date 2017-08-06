@@ -19,7 +19,7 @@
     "html": "npm-run-all html-copy",
     "html-copy": "copyfiles -u 1 html/*.html dist",
     "build": "npm-run-all --parallel html css",
-    "watch": "nodemon --ignore dist/ --ignore node_modules --ignore config --ignore backstop_data -e scss,html -x \"npm run css && npm run html\"",
+    "watch": "nodemon --ignore dist/ --ignore node_modules/ --ignore config/ --ignore backstop/ -e scss,html -x \"npm run css && npm run html\"",
     "serve": "lite-server -c config/lite-server.config.json",
     "test": "backstop test --config config/backstop.config.json",
     "test-reference": "backstop reference --config config/backstop.config.json",
