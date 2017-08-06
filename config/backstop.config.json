@@ -30,6 +30,7 @@
         "#badges",
         "#buttons",
         "#jumbotrons",
+        "#pagination",
         "#progress"
       ],
       "readyEvent": null,
