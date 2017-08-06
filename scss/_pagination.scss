@@ -1,6 +1,14 @@
 Pagination {
   display: flex;
   @include border-radius();
+
+  &[alignment="content-center"] {
+    justify-content: center !important;
+  }
+
+  &[alignment="content-end"] {
+    justify-content: flex-end !important;
+  }
 }
 
 PaginationItem {
