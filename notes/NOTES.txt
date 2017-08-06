@@ -55,3 +55,6 @@ PaginationItem[active] > a {
     color: #fff;
 }
 so in theory I should force the color somehow (using important or increasing specificity). for the experiment I'll leave it as is
+
+6) TooltipInner == tooltipinner, not great :(
+)
